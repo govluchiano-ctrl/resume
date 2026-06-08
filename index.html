@@ -33,6 +33,7 @@
             box-shadow: 0 25px 40px -12px rgba(0,0,0,0.25);
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
         .hero::after {
             content: "🧠";
@@ -42,6 +43,20 @@
             bottom: -20px;
             right: -20px;
             pointer-events: none;
+        }
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .hero-photo img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: #f0f4f8;
         }
         .hero-name {
             font-size: 3.8rem;
@@ -54,12 +69,13 @@
             font-weight: 400;
             opacity: 0.85;
             max-width: 80%;
-            margin-bottom: 24px;
+            margin: 0 auto 24px auto;
         }
         .hero-contact {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
             margin-top: 16px;
         }
         .hero-contact a, .hero-contact span {
@@ -301,6 +317,7 @@
             .container { padding: 20px 16px; }
             .section-title { font-size: 1.5rem; }
             .timeline { padding-left: 20px; }
+            .hero-photo img { width: 100px; height: 100px; }
         }
     </style>
 </head>
@@ -308,6 +325,9 @@
 
 <div class="container">
     <div class="hero" data-aos="fade-up">
+        <div class="hero-photo">
+            <img src="Маргарита.jpg" alt="Маргарита Лукинская">
+        </div>
         <div class="hero-name">Маргарита Лукинская</div>
         <div class="hero-tagline">Психолог, нейропсихолог, медицинский переводчик</div>
         <div class="hero-contact">
