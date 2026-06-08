@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Маргарита Лукинская | Психолог, нейропсихолог</title>
-    <meta name="description" content="Резюме психолога, нейропсихолога, медицинского переводчика. Английский C1, испанский B1.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Маргарита Лукинская | Резюме">
-    <meta property="og:description" content="Клиническая психология, нейропсихологическая диагностика, медицинский перевод.">
-    <meta property="og:type" content="website">
-    <!-- Fonts & Icons -->
+    <title>Маргарита Лукинская | Нейропсихолог</title>
+    <meta name="description" content="Резюме нейропсихолога, клинического психолога, медицинского переводчика. Английский C1, испанский B1.">
+    <meta property="og:title" content="Маргарита Лукинская | Резюме нейропсихолога">
+    <meta property="og:description" content="Нейропсихологическая диагностика, клиническая психология, медицинский перевод.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- AOS Library (анимации) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background: #f0f4f8;
@@ -28,14 +19,11 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 24px;
         }
-
-        /* Header / Hero */
         .hero {
             background: linear-gradient(135deg, #1a2a4f 0%, #0f1a33 100%);
             color: white;
@@ -89,8 +77,6 @@
         .hero-contact a:hover {
             background: rgba(255,255,255,0.25);
         }
-
-        /* Cards */
         .card {
             background: white;
             border-radius: 32px;
@@ -118,8 +104,6 @@
             color: #2d9c7a;
             font-size: 1.6rem;
         }
-
-        /* Timeline */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -181,8 +165,6 @@
             left: 0;
             color: #2d9c7a;
         }
-
-        /* Skills Grid с прогресс-барами */
         .skills-group {
             margin-bottom: 28px;
         }
@@ -208,8 +190,6 @@
             width: 0%;
             transition: width 1s ease;
         }
-
-        /* Language indicators (круговые) — упрощённо через flex */
         .lang-wrapper {
             display: flex;
             gap: 40px;
@@ -254,13 +234,12 @@
             font-size: 1.5rem;
             color: #1a2a4f;
         }
-
-        /* Grid для публикаций и дополнительного */
         .publications-list {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            align-items: center;
         }
         .pub-item {
             background: #f8fafc;
@@ -271,32 +250,18 @@
             align-items: center;
             gap: 10px;
         }
-
-        /* Кнопка PDF */
-        .pdf-btn {
-            background: #1a2a4f;
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 40px;
-            font-size: 1rem;
+        .pub-item a {
+            text-decoration: none;
+            color: #2d9c7a;
             font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.2s;
-            margin-top: 16px;
         }
-        .pdf-btn:hover {
-            background: #2d9c7a;
+        .pub-item a:hover {
+            text-decoration: underline;
         }
-
-        /* Форма */
         .form-card {
             background: white;
             border-radius: 32px;
-            padding: 32px;
+            padding: 0;
         }
         .form-group {
             margin-bottom: 20px;
@@ -329,7 +294,6 @@
             color: #5a6e7c;
             font-size: 0.85rem;
         }
-
         @media (max-width: 768px) {
             .hero { padding: 32px 24px; }
             .hero-name { font-size: 2.2rem; }
@@ -343,7 +307,6 @@
 <body>
 
 <div class="container">
-    <!-- Hero -->
     <div class="hero" data-aos="fade-up">
         <div class="hero-name">Маргарита Лукинская</div>
         <div class="hero-tagline">Психолог, нейропсихолог, медицинский переводчик</div>
@@ -353,13 +316,11 @@
         </div>
     </div>
 
-    <!-- О себе кратко -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-user-astronaut"></i> О себе</div>
-        <p style="font-size: 1.05rem;">Психолог (бакалавр с отличием, МГППУ, 2024) и лингвист-переводчик (РГСУ, 2018). Завершила профессиональную переподготовку по возрастной нейропсихологии (МГППУ, 612 ч., 2026). Сейчас прохожу переподготовку «Клиническая психология» (МПСУ, 1200 ч.). Владею английским (C1) и испанским (B1). Ищу позицию в медицинском или реабилитационном центре, где смогу применять нейропсихологическую диагностику, медицинский перевод и клинические знания.</p>
+        <p style="font-size: 1.05rem;">Психолог (бакалавр с отличием, Московский государственный психолого-педагогический университет, 2024) и лингвист-переводчик (РГСУ, 2018). Завершила профессиональную переподготовку по возрастной нейропсихологии (МГППУ, 612 ч., 2026). В настоящее время прохожу переподготовку «Клиническая психология» (МПСУ, 1200 ч.). Владею английским (C1) и испанским (B1). <strong>Нацелена на позицию нейропсихолога в специализированных центрах, школах, детских садах или реабилитационных учреждениях.</strong> Обладаю знаниями в области нейропсихологической диагностики, коррекционных методик и клинической психологии, а также опытом медицинского перевода, что позволяет эффективно взаимодействовать в междисциплинарной среде.</p>
     </div>
 
-    <!-- Образование и переподготовки (таймлайн) -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-graduation-cap"></i> Образование и переподготовки</div>
         <div class="timeline">
@@ -373,22 +334,21 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2021–2024</div>
                 <div class="timeline-title">Психология (бакалавр с отличием)</div>
-                <div class="timeline-sub">Московский психолого-педагогический университет (МГППУ)</div>
+                <div class="timeline-sub">Московский государственный психолого-педагогический университет (МГППУ)</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2025–2026 (завершена)</div>
-                <div class="timeline-title">Проф. переподготовка «Возрастная нейропсихология: диагностика и реабилитация»</div>
+                <div class="timeline-title">Профессиональная переподготовка «Возрастная нейропсихология: диагностика и реабилитация»</div>
                 <div class="timeline-sub">МГППУ, 612 часов</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2026 – н.в.</div>
-                <div class="timeline-title">Проф. переподготовка «Клиническая психология»</div>
+                <div class="timeline-title">Профессиональная переподготовка «Клиническая психология»</div>
                 <div class="timeline-sub">Московский психолого-социальный университет (МПСУ), 1200 часов</div>
             </div>
         </div>
-        <!-- Повышение квалификации -->
         <div style="margin-top: 24px;">
             <div style="font-weight: 600; margin-bottom: 12px;">🏅 Повышение квалификации (избранное)</div>
             <ul class="timeline-desc">
@@ -400,7 +360,6 @@
         </div>
     </div>
 
-    <!-- Опыт работы (таймлайн) -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</div>
         <div class="timeline">
@@ -436,7 +395,6 @@
         </div>
     </div>
 
-    <!-- Навыки + Инфографика (прогресс-бары) -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-chart-line"></i> Ключевые компетенции</div>
         <div class="skills-group">
@@ -459,7 +417,6 @@
         </div>
     </div>
 
-    <!-- Языки с круговой диаграммой (canvas) -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-language"></i> Языки</div>
         <div class="lang-wrapper">
@@ -486,17 +443,15 @@
         </div>
     </div>
 
-    <!-- Публикации -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-book-open"></i> Научные публикации</div>
         <div class="publications-list">
-            <div class="pub-item"><i class="fas fa-file-alt"></i> Более 10 работ</div>
-            <div class="pub-item"><i class="fas fa-star"></i> 3 статьи в журналах ВАК</div>
+            <div class="pub-item"><i class="fas fa-file-alt"></i> Опубликовано свыше 10 материалов</div>
+            <div class="pub-item"><i class="fas fa-star"></i> 3 статьи в рецензируемых научных журналах, рекомендованных ВАК РФ</div>
+            <div class="pub-item"><i class="fas fa-external-link-alt"></i> <a href="https://elibrary.ru/author_items.asp?authorid=1181361" target="_blank" rel="noopener noreferrer">Список публикаций на eLibrary.ru</a></div>
         </div>
-        <p style="margin-top: 16px;">Темы: клиническая психология, нейропсихология, медицинский перевод.</p>
     </div>
 
-    <!-- Форма обратной связи -->
     <div class="card" data-aos="fade-up">
         <div class="section-title"><i class="fas fa-envelope-open-text"></i> Связаться со мной</div>
         <div class="form-card">
@@ -518,8 +473,6 @@
             </form>
         </div>
     </div>
-
-    <button class="pdf-btn" id="downloadPDF"><i class="fas fa-download"></i> Скачать резюме в PDF</button>
 </div>
 
 <footer>
@@ -529,13 +482,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 800, once: true });
-
-    // Кнопка печати/PDF
-    document.getElementById('downloadPDF').addEventListener('click', function() {
-        window.print();
-    });
-
-    // Анимация круговых диаграмм для языков (через stroke-dashoffset)
     function setCircleProgress(circleId, percent) {
         const circle = document.getElementById(circleId);
         if (!circle) return;
@@ -545,11 +491,8 @@
         const offset = circumference - (percent / 100) * circumference;
         circle.style.strokeDashoffset = offset;
     }
-    // C1 -> 90%, B1 -> 60% (условно)
     setCircleProgress('engCircle', 90);
     setCircleProgress('espCircle', 60);
-
-    // Также можно запустить повторно при ресайзе (не критично)
 </script>
 </body>
 </html>
