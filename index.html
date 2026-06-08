@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Маргарита Лукинская | Психолог, нейропсихолог</title>
+    <meta name="description" content="Резюме психолога, нейропсихолога, медицинского переводчика. Английский C1, испанский B1.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Маргарита Лукинская | Резюме">
+    <meta property="og:description" content="Клиническая психология, нейропсихологическая диагностика, медицинский перевод.">
+    <meta property="og:type" content="website">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Library (анимации) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f8;
+            color: #1e2b3c;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a2a4f 0%, #0f1a33 100%);
+            color: white;
+            border-radius: 40px;
+            padding: 60px 48px;
+            margin-bottom: 40px;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "🧠";
+            font-size: 160px;
+            opacity: 0.05;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            pointer-events: none;
+        }
+        .hero-name {
+            font-size: 3.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .hero-tagline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            opacity: 0.85;
+            max-width: 80%;
+            margin-bottom: 24px;
+        }
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .hero-contact a, .hero-contact span {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 18px;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        .hero-contact a:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a2a4f;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid #2d9c7a;
+            padding-left: 20px;
+        }
+        .section-title i {
+            color: #2d9c7a;
+            font-size: 1.6rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #2d9c7a;
+            opacity: 0.4;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -30px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: #2d9c7a;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 3px #2d9c7a30;
+        }
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2d9c7a;
+            margin-bottom: 4px;
+        }
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e2b3c;
+        }
+        .timeline-sub {
+            font-weight: 500;
+            color: #4a627a;
+            margin-bottom: 8px;
+        }
+        .timeline-desc {
+            margin-top: 8px;
+            padding-left: 20px;
+            list-style: none;
+        }
+        .timeline-desc li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-desc li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2d9c7a;
+        }
+
+        /* Skills Grid с прогресс-барами */
+        .skills-group {
+            margin-bottom: 28px;
+        }
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .progress-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #2d9c7a, #1a2a4f);
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        /* Language indicators (круговые) — упрощённо через flex */
+        .lang-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .lang-card {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 140px;
+        }
+        .lang-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .circle-skill {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 12px;
+        }
+        .circle-bg {
+            stroke: #e2e8f0;
+            stroke-width: 8;
+            fill: none;
+        }
+        .circle-progress {
+            stroke: #2d9c7a;
+            stroke-width: 8;
+            fill: none;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            transition: stroke-dashoffset 1.5s ease;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .lang-level {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #1a2a4f;
+        }
+
+        /* Grid для публикаций и дополнительного */
+        .publications-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .pub-item {
+            background: #f8fafc;
+            padding: 16px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Кнопка PDF */
+        .pdf-btn {
+            background: #1a2a4f;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+            margin-top: 16px;
+        }
+        .pdf-btn:hover {
+            background: #2d9c7a;
+        }
+
+        /* Форма */
+        .form-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 24px;
+            font-family: 'Inter', sans-serif;
+            transition: 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #2d9c7a;
+            box-shadow: 0 0 0 3px rgba(45,156,122,0.2);
+        }
+        button[type="submit"] {
+            background: #2d9c7a;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: #5a6e7c;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 32px 24px; }
+            .hero-name { font-size: 2.2rem; }
+            .hero-tagline { font-size: 1rem; max-width: 100%; }
+            .container { padding: 20px 16px; }
+            .section-title { font-size: 1.5rem; }
+            .timeline { padding-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Hero -->
+    <div class="hero" data-aos="fade-up">
+        <div class="hero-name">Маргарита Лукинская</div>
+        <div class="hero-tagline">Психолог, нейропсихолог, медицинский переводчик</div>
+        <div class="hero-contact">
+            <span><i class="fas fa-map-marker-alt"></i> Москва</span>
+            <a href="mailto:margarita.sam95@gmail.com"><i class="fas fa-envelope"></i> margarita.sam95@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- О себе кратко -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-user-astronaut"></i> О себе</div>
+        <p style="font-size: 1.05rem;">Психолог (бакалавр с отличием, МГППУ, 2024) и лингвист-переводчик (РГСУ, 2018). Завершила профессиональную переподготовку по возрастной нейропсихологии (МГППУ, 612 ч., 2026). Сейчас прохожу переподготовку «Клиническая психология» (МПСУ, 1200 ч.). Владею английским (C1) и испанским (B1). Ищу позицию в медицинском или реабилитационном центре, где смогу применять нейропсихологическую диагностику, медицинский перевод и клинические знания.</p>
+    </div>
+
+    <!-- Образование и переподготовки (таймлайн) -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-graduation-cap"></i> Образование и переподготовки</div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2014–2018</div>
+                <div class="timeline-title">Перевод и переводоведение (специалист)</div>
+                <div class="timeline-sub">Российский государственный социальный университет (РГСУ)</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021–2024</div>
+                <div class="timeline-title">Психология (бакалавр с отличием)</div>
+                <div class="timeline-sub">Московский психолого-педагогический университет (МГППУ)</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025–2026 (завершена)</div>
+                <div class="timeline-title">Проф. переподготовка «Возрастная нейропсихология: диагностика и реабилитация»</div>
+                <div class="timeline-sub">МГППУ, 612 часов</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2026 – н.в.</div>
+                <div class="timeline-title">Проф. переподготовка «Клиническая психология»</div>
+                <div class="timeline-sub">Московский психолого-социальный университет (МПСУ), 1200 часов</div>
+            </div>
+        </div>
+        <!-- Повышение квалификации -->
+        <div style="margin-top: 24px;">
+            <div style="font-weight: 600; margin-bottom: 12px;">🏅 Повышение квалификации (избранное)</div>
+            <ul class="timeline-desc">
+                <li>«Понимающая психотерапия, 2А ступень: Техника первичной консультации. Супервизорский практикум» (МГППУ, 50 ч., 2024)</li>
+                <li>«Понимающая психотерапия, 2 ступень: Структурирование психотерапевтической ситуации» (МГППУ, 50 ч., 2024)</li>
+                <li>«Арт-терапия и интермодальная терапия искусствами» (МГППУ, 88 ч., 2023)</li>
+                <li>«Современные психотехнологии в управлении, политике, бизнесе» (МГИМО, 16 ч., 2023)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Опыт работы (таймлайн) -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2017–2021</div>
+                <div class="timeline-title">Секретарь-переводчик / референт-переводчик</div>
+                <div class="timeline-sub">Европейский медицинский центр, Москва</div>
+                <ul class="timeline-desc">
+                    <li>Устный и письменный медицинский перевод (английский), работа с иностранными пациентами.</li>
+                    <li>Ведение двуязычной документации, координация с врачами и страховыми компаниями.</li>
+                    <li>Навыки эмпатичного общения в стрессовых ситуациях, внимание к деталям.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021–2024</div>
+                <div class="timeline-title">Декретный отпуск с профессиональным обучением</div>
+                <ul class="timeline-desc">
+                    <li>Получение второго высшего образования (психология с отличием).</li>
+                    <li>Курсы повышения квалификации, научные публикации.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024–н.в.</div>
+                <div class="timeline-title">Учебная практика и супервизии</div>
+                <ul class="timeline-desc">
+                    <li>Отработка нейропсихологических проб (луриевский подход, скрининг).</li>
+                    <li>Участие в супервизионных группах МГППУ, анализ клинических случаев.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навыки + Инфографика (прогресс-бары) -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-chart-line"></i> Ключевые компетенции</div>
+        <div class="skills-group">
+            <div class="skill-item">
+                <div class="skill-header"><span>Нейропсихологическая диагностика (пробы Лурия, синдромный анализ)</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>Психометрика / SPSS (корреляции, ANOVA, t-критерий)</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>Медицинская грамотность и перевод</span><span>95%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>MS Office, базы данных</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Языки с круговой диаграммой (canvas) -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-language"></i> Языки</div>
+        <div class="lang-wrapper">
+            <div class="lang-card">
+                <div class="lang-name">Английский</div>
+                <div class="circle-skill">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="circle-progress" id="engCircle" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="lang-level" id="engLevel">C1</div>
+                </div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">Испанский</div>
+                <div class="circle-skill">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="circle-progress" id="espCircle" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="lang-level" id="espLevel">B1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Публикации -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-book-open"></i> Научные публикации</div>
+        <div class="publications-list">
+            <div class="pub-item"><i class="fas fa-file-alt"></i> Более 10 работ</div>
+            <div class="pub-item"><i class="fas fa-star"></i> 3 статьи в журналах ВАК</div>
+        </div>
+        <p style="margin-top: 16px;">Темы: клиническая психология, нейропсихология, медицинский перевод.</p>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <div class="card" data-aos="fade-up">
+        <div class="section-title"><i class="fas fa-envelope-open-text"></i> Связаться со мной</div>
+        <div class="form-card">
+            <form id="contactForm" action="https://formsubmit.co/margarita.sam95@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Новое сообщение с сайта-резюме">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="form-group">
+                    <input type="text" name="Имя" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Ваш email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="Сообщение" rows="4" placeholder="Текст сообщения..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Отправить <i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button class="pdf-btn" id="downloadPDF"><i class="fas fa-download"></i> Скачать резюме в PDF</button>
+</div>
+
+<footer>
+    <p>© 2025 Маргарита Лукинская · Всегда открыта для профессиональных возможностей</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+
+    // Кнопка печати/PDF
+    document.getElementById('downloadPDF').addEventListener('click', function() {
+        window.print();
+    });
+
+    // Анимация круговых диаграмм для языков (через stroke-dashoffset)
+    function setCircleProgress(circleId, percent) {
+        const circle = document.getElementById(circleId);
+        if (!circle) return;
+        const radius = 45;
+        const circumference = 2 * Math.PI * radius;
+        circle.style.strokeDasharray = circumference;
+        const offset = circumference - (percent / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+    }
+    // C1 -> 90%, B1 -> 60% (условно)
+    setCircleProgress('engCircle', 90);
+    setCircleProgress('espCircle', 60);
+
+    // Также можно запустить повторно при ресайзе (не критично)
+</script>
+</body>
+</html>
